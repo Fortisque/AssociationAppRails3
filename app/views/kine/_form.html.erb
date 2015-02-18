@@ -1,0 +1,21 @@
+<%= form_for(@cow) do |f| %>
+  <% if @cow.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cow.errors.count, "error") %> prohibited this cow from being saved:</h2>
+
+      <ul>
+      <% @cow.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :farmer %><br />
+    <%= f.text_field :farmer %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

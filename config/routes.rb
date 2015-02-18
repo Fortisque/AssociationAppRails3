@@ -1,4 +1,10 @@
 AssociationAppRails3::Application.routes.draw do
+  resources :kine
+
+
+  resources :farmers
+
+
   get "admin/admin_login"
 
   get "admin/admin_view"
