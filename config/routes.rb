@@ -1,4 +1,9 @@
 AssociationAppRails3::Application.routes.draw do
+  get "admin/admin_login"
+
+  get "admin/admin_view"
+  get "admin" => 'admin#admin_test'
+
   resources :users
 
 
